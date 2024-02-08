@@ -9,11 +9,13 @@ import time
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://www.google.com/")
 time.sleep(2)
-# find the google searchbox
+# find the Google searchbox
 search_box = driver.find_element(By.NAME, "q")
 search_box.click()
+# search and find the current temperature 
 search_box.send_keys("weather")
 search_box.send_keys(Keys.ENTER)
+current_temp = driver.find_element(By.ID, "wob_tm")
+# print the temperature
+print(f"Current Temperature: {current_temp.text} degrees")
 time.sleep(5)
-locate_python = sys.exec_prefix
-print(locate_python) 

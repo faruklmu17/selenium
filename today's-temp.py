@@ -1,3 +1,6 @@
+
+#this code searches and finds the current temperature of a day 
+
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service
